@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.bg-peach{
+  background-color: #fadfd5;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
