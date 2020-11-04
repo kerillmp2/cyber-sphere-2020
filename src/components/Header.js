@@ -9,7 +9,6 @@ export default class Header extends React.Component{
                 <Navbar.Brand href="/profile">Кибер-Сфера</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="/profile">Моя страница</Nav.Link>
-                    <Nav.Link href="/about">Обо мне</Nav.Link>
                     <Nav.Link href="/messages">Мои сообщения</Nav.Link>
                     <Nav.Link href="/subs">Мои группы</Nav.Link>
                 </Nav>

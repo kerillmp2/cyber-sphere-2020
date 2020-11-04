@@ -11,7 +11,7 @@ export default class Post extends React.Component {
             <div className="bg-transparent pr-3 pl-3 pb-2 pt-1 mb-5 shadow">
                 <p className="mb-0 mt-0 text-secondary">{this.props.date}</p>
                 <Image width="400px" src={this.props.image}/>
-                <p>{this.props.innerText}</p>
+                <p className="mt-1">{this.props.innerText}</p>
             </div>
         );
     }

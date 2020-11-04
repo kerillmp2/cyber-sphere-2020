@@ -1,11 +1,10 @@
 import './styles/App.css';
-import Header from "./components/Header";
 import React from "react";
 import SimpleRouter from "./features/SimpleRouter";
 
 function App() {
   return (
-    <div>
+    <div className="h-100">
         <SimpleRouter/>
     </div>
   );
