@@ -68,7 +68,7 @@ export default class SimpleRouter extends React.Component {
                             <ProfilePage class={this.state.class}/>
                         </Route>
 
-                        <Route path="answers">
+                        <Route path="/answers">
                             <AnswerPage class={this.state.class}/>
                         </Route>
 
