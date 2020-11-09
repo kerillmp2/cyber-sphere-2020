@@ -3,7 +3,28 @@
 }
 
 .bg-peach{
-  background-color: #fadfd5;
+  background-color: #F7ECE1;
+}
+
+
+.bg-apple{
+  background-color: #88D18A;
+}
+
+.bg-shamrock{
+  background-color: #4C9F70;
+}
+
+.bg-post{
+  background-color: #FBF5EF;
+}
+
+.bg-blue{
+  background-color: #00A8E8;
+}
+
+.bg-purple{
+  background-color: #6f0598;
 }
 
 .App-logo {

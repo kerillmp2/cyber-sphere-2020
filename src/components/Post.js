@@ -8,10 +8,16 @@ export default class Post extends React.Component {
 
     render() {
         return (
-            <div className="bg-transparent pr-3 pl-3 pb-2 pt-1 mb-5 shadow">
-                <p className="mb-0 mt-0 text-secondary">{this.props.date}</p>
-                <Image width="400px" src={this.props.image}/>
-                <p className="mt-1">{this.props.innerText}</p>
+            <div style={{borderRadius: "20px"}} className="bg-post pr-3 pl-3 pb-2 pt-1 mb-5 shadow">
+                <p className="ml-2 mb-0 mt-1 text-secondary">{this.props.date}</p>
+                {this.props.image && <Image width="400px" src={this.props.image} style={{borderRadius: "15px"}}/>}
+                <p className="ml-2 mt-1">
+                    {this.props.innerText}
+                    {this.props.secondRow && <div>{this.props.secondRow}</div>}
+                    {this.props.thirdRow && <div>{this.props.thirdRow}</div>}
+                    {this.props.fouthRow && <div>{this.props.fouthRow}</div>}
+                    {this.props.fifthRow && <div>{this.props.fifthRow}</div>}
+                </p>
             </div>
         );
     }
