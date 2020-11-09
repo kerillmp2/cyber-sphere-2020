@@ -10,6 +10,7 @@ import MessagesPage from "../pages/MessagesPage";
 import SubsPage from "../pages/SubsPage";
 import WelcomePage from "../pages/WelcomePage";
 import Footer from "../components/Footer";
+import AnswerPage from "../pages/AnswerPage";
 
 export default class SimpleRouter extends React.Component {
     constructor(props) {
@@ -66,6 +67,11 @@ export default class SimpleRouter extends React.Component {
                         <Route path="/profile">
                             <ProfilePage class={this.state.class}/>
                         </Route>
+
+                        <Route path="answers">
+                            <AnswerPage class={this.state.class}/>
+                        </Route>
+
                         <Route path="/">
                             <div className="bg-peach h-100">
                                 <Header class={this.state.class}/>

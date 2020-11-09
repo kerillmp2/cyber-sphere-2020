@@ -16,6 +16,7 @@ export default class Header extends React.Component {
                     <Nav.Link className="p-2" href="/profile">Моя страница</Nav.Link>
                     {msg}
                     <Nav.Link className="p-2" href="/subs">Группы</Nav.Link>
+                    <Nav.Link className="p-2 ml-3" href="/answers">Отправить ответ</Nav.Link>
                 </Nav>
             </Navbar>
         </div>)

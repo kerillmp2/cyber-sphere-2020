@@ -8,11 +8,7 @@ export default function AnswerPage(props) {
     const {register, handleSubmit, errors} = useForm();
 
     const registerSubmit = (values) => {
-        localStorage.setItem("name", values.name);
-        localStorage.setItem("class", values.class);
-        localStorage.setItem("start", "");
         console.log(values);
-        props.onEnter(values.name, values.class, "");
     }
 
     return (
@@ -24,8 +20,8 @@ export default function AnswerPage(props) {
                         <label>Пароль:</label>
                         <input name="ans" ref={register({required: true, maxLength: 128})}/>
                         <div className="error">
-                            {errors.name && errors.name.type === "required" && (<p>Введите название ответ!</p>)}
-                            {errors.name && errors.name.type === "maxLength" && (
+                            {errors.ans && errors.ans.type === "required" && (<p>Введите ответ!</p>)}
+                            {errors.ans && errors.ans.type === "maxLength" && (
                                 <p>Ответ не должен превышать 128 символов!</p>)}
                         </div>
                     </div>
