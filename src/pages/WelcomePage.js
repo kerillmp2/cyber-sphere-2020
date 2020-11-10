@@ -8,11 +8,12 @@ export default function WelcomePage(props) {
     const {register, handleSubmit, errors} = useForm();
 
     const registerSubmit = (values) => {
+        let now = Date.now().toString()
         localStorage.setItem("name", values.name);
         localStorage.setItem("class", values.class);
-        localStorage.setItem("start", "");
+        localStorage.setItem("start", now);
         console.log(values);
-        props.onEnter(values.name, values.class, "");
+        props.onEnter(values.name, values.class, now);
     }
 
     return (

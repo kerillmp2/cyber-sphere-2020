@@ -11,6 +11,7 @@ import SubsPage from "../pages/SubsPage";
 import WelcomePage from "../pages/WelcomePage";
 import Footer from "../components/Footer";
 import AnswerPage from "../pages/AnswerPage";
+import EndPage from "../pages/EndPage";
 
 export default class SimpleRouter extends React.Component {
     constructor(props) {
@@ -18,7 +19,8 @@ export default class SimpleRouter extends React.Component {
         this.state = {
             name: localStorage.getItem("name"),
             class: localStorage.getItem("class"),
-            start: localStorage.getItem("start")
+            start: localStorage.getItem("start"),
+            isTimeOK: true,
         }
     }
 
@@ -30,7 +32,44 @@ export default class SimpleRouter extends React.Component {
         })
     }
 
+    handleSendAnswer = (answer, correct) => {
+        let command = localStorage.getItem("name");
+        let cl = localStorage.getItem("class");
+        let start = localStorage.getItem("start");
+
+        let isTimeOK = this.checkTime(parseInt(start));
+
+        this.setState({
+            isTimeOK: isTimeOK
+        })
+
+        if(isTimeOK) {
+           this.sendAnswer(command, cl, answer, Date.now() - parseInt(start));
+        }
+    }
+
+    sendAnswer = (command, cl, ans, start, correct) => {
+
+    }
+
+    checkTime = (start) => {
+        let now = Date.now()
+        return now - start <= 1000 * 60 * 60;
+    }
+
     render() {
+
+        if (this.state.isTimeOK === false) {
+            return (
+                <BrowserRouter>
+                    <Switch>
+                        <Route path="/">
+                            <EndPage/>
+                        </Route>
+                    </Switch>
+                </BrowserRouter>
+            )
+        }
 
         if (localStorage.getItem("name") === null ||
             localStorage.getItem("class") === null ||
@@ -69,7 +108,8 @@ export default class SimpleRouter extends React.Component {
                         </Route>
 
                         <Route path="/answers">
-                            <AnswerPage class={this.state.class}/>
+                            <AnswerPage class={this.state.class}
+                            onSendAnswer={this.handleSendAnswer}/>
                         </Route>
 
                         <Route path="/">
