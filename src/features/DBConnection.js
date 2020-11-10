@@ -31,6 +31,7 @@ export default function DBConnection(props) {
         }
         await API.graphql({query: createTodo, variables: {input: newAnswer}});
         setAnswers([...answer, newAnswer]);
+        //
     }
 
     const handleSend = (command, cl, answer, time, correct) => {
