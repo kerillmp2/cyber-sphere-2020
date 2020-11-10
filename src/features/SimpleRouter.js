@@ -44,12 +44,12 @@ export default class SimpleRouter extends React.Component {
         })
 
         if(isTimeOK) {
-           this.sendAnswer(command, cl, answer, Date.now() - parseInt(start));
+           this.handleSend(command, cl, answer, Date.now() - parseInt(start));
         }
     }
 
-    sendAnswer = (command, cl, ans, start, correct) => {
-
+    handleSend = (command, cl, ans, start, correct) => {
+        this.props.onSendAnswer(command, cl, ans, start, correct);
     }
 
     checkTime = (start) => {

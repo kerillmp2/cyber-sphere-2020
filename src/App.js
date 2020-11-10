@@ -1,11 +1,11 @@
 import './styles/App.css';
 import React from "react";
-import SimpleRouter from "./features/SimpleRouter";
+import DBConnection from "./features/DBConnection";
 
 function App() {
   return (
     <div className="h-100">
-        <SimpleRouter/>
+        <DBConnection/>
     </div>
   );
 }
