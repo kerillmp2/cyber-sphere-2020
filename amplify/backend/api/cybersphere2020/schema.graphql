@@ -1,8 +1,0 @@
-type Todo @model {
-  id: ID!
-  command: String!
-  cl: String!
-  answer: String!
-  time: Int!
-  correct: Boolean!
-}

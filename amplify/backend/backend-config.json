@@ -1,6 +1,6 @@
 {
   "api": {
-    "cybersphere2020": {
+    "cyber2020": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -8,8 +8,8 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 11,
-              "description": "connection with db"
+              "apiKeyExpirationDays": 14,
+              "description": "answers"
             }
           },
           "additionalAuthenticationProviders": []
